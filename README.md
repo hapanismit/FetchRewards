@@ -25,9 +25,15 @@ http://localhost:8080/api/transaction/add/
 Request : 
 ```
 curl -d  '{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }' -H 'Content-Type: application/json' localhost:8080/api/transaction/add/
-
 ```
-
+Response :
+```
+{
+    "payer": "DANNON",
+    "points": 1000,
+    "timestamp": "2020-11-02T14:00:00Z"
+}
+```
 
 2. Spend Points
 
@@ -39,6 +45,23 @@ Request :
 ```
 curl -d  '{ "points": 5000 }' -H 'Content-Type: application/json' localhost:8080/api/spend/
 ```
+Response :
+```
+[
+    {
+        "payer": "UNILEVER",
+        "points": -200
+    },
+    {
+        "payer": "DANNON",
+        "points": -100
+    },
+    {
+        "payer": "MILLER COORS",
+        "points": -4700
+    }
+]
+```
 
 3. Get Balance
 
@@ -46,8 +69,17 @@ URL :
 ```
 http://localhost:8080/api/balance/
 ```
-Request : 
 
+Request : 
 ```
 curl -d  localhost:8080/api/balance/
+```
+
+Response :
+```
+{
+    "UNILEVER": 0,
+    "MILLER COORS": 5300,
+    "DANNON": 1000
+}
 ```
