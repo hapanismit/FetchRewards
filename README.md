@@ -11,54 +11,43 @@
 
 ### Run the Project in IDE
 
-- Simply open the project in any IDE and run the FetchrewardsApplication.java file.
+- Open the project in any IDE and run the FetchrewardsApplication.java file.
 - Test the api in Postman by sending request and checking the responses.
 
 ### REST API routes
 
 1. Add Transaction
 
-URL
+URL : 
 ```
 http://localhost:8080/api/transaction/add/
 ```
-Transaction 1 
-```
-curl -d  '{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }' -H 'Content-Type: application/json' localhost:8080/api/transaction/add/
-
-```
-Transaction 2 
-```
-curl -d  '{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }' -H 'Content-Type: application/json' localhost:8080/api/transaction/add/
-
-```
-Transaction 3 
-```
-curl -d  '{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }' -H 'Content-Type: application/json' localhost:8080/api/transaction/add/
-
-```
-Transaction 4 
-```
-curl -d  '{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }' -H 'Content-Type: application/json' localhost:8080/api/transaction/add/
-
-```
-Transaction 5 
+Request : 
 ```
 curl -d  '{ "payer": "DANNON", "points": 1000, "timestamp": "2020-11-02T14:00:00Z" }' -H 'Content-Type: application/json' localhost:8080/api/transaction/add/
 
 ```
 
 
+2. Spend Points
 
+URL : 
+```
+http://localhost:8080/api/spend/
+```
+Request : 
+```
+curl -d  '{ "points": 5000 }' -H 'Content-Type: application/json' localhost:8080/api/spend/
+```
 
+3. Get Balance
 
-2.
+URL : 
+```
+http://localhost:8080/api/balance/
+```
+Request : 
 
 ```
-curl -d  '{ "points": 5000 }' -H 'Content-Type: application/json' localhost:8080/consumer/points
-```
-
-
-```
-curl -d  localhost:8080/payer/balances
+curl -d  localhost:8080/api/balance/
 ```
