@@ -16,7 +16,7 @@
 
 ### REST API routes
 
-1. Add Transaction
+### 1. Add Transaction
 
 URL : 
 ```
@@ -35,7 +35,7 @@ Response :
 }
 ```
 
-2. Spend Points
+### 2. Spend Points
 
 URL : 
 ```
@@ -63,7 +63,7 @@ Response :
 ]
 ```
 
-3. Get Balance
+### 3. Get Balance
 
 URL : 
 ```
